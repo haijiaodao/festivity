@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>节日专辑</title>
+<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/1.10.2/jquery.min.js"></script>
+<style>
+@import url("assets/css/css2.css");
+
+:root {
+	--yellow: #fff;
+	--dark: red;
+	--deg: red;
+	--trans: all 0.4s ease 0s;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	display: flex;
+	justify-content: center;
+	font-family: "Lato", Arial, Helvetica, serif;
+	background: linear-gradient(90deg, #131417, var(--dark) 35% 65%, #131417);
+	font-size: 1em;
+}
+
+body *,
+body *:before,
+body *:after {
+	box-sizing: border-box;
+}
+
+.content {
+	width: 90vmin;
+
+}
+
+h1{
+	text-align: center;
+font-style: italic;字体斜体
+  				font-weight: bolder;字体加粗
+  				font-size: 24px;字体大小
+  				font-family: "微软雅黑";字体类型*/
+  				font: italic bolder 24px/120px "微软雅黑";
+
+}
+h2 {
+	text-align: center;
+font-family: "Lato", Arial, Helvetica, serif;
+}
+
+.team {
+	padding: 2em 0 2em 2.5em;
+	margin: 0;
+}
+
+.member {
+	margin: 1.5em 0 0.5em;
+	padding: 0.73em;
+	background: linear-gradient(
+		83deg,
+		var(--yellow) 0 97%,
+		#fff0 calc(97% + 1px) 100%
+	);
+	position: relative;
+	list-style: none;
+	min-height: 10vmin;
+	display: inline-block;
+	transform: scale(0.85);
+	transition: var(--trans);
+}
+
+.member:nth-of-type(even) {
+	text-align: right;
+	background: linear-gradient(
+		-83deg,
+		var(--yellow) 0 97%,
+		#fff0 calc(97% + 1px) 100%
+	);
+}
+
+.thumb {
+	width: 12vmin;
+	height: 12vmin;
+	float: left;
+	margin-right: 2em;
+	background: linear-gradient(
+		var(--deg),
+		var(--dark) 0 70%,
+		var(--yellow) 0% 100%
+	);
+	transform: rotate(-4deg);
+	transition: var(--trans);
+	border-radius: 0.25em;
+	overflow: hidden;
+	margin-left: -3em;
+	padding: 0.5em;
+}
+
+.member:nth-of-type(even) .thumb {
+	--deg: 86deg;
+	float: right;
+	margin-left: 2em;
+	margin-right: -3em;
+	transform: rotate(4deg);
+}
+
+.thumb img {
+	width: 100%;
+	height: 100%;
+	border-radius: 0.25em;
+	filter: grayscale(1);
+	background: var(--dark);
+}
+
+.member:hover {
+	transform: scale(1);
+	transition: var(--trans);
+	filter: drop-shadow(0px 20px 10px #0008);
+}
+
+.member:hover .thumb {
+	padding: 0.1em;
+	transition: var(--trans);
+	transform: rotate(-1deg);
+	--deg: -89deg;
+}
+
+.member:nth-of-type(even):hover .thumb {
+	--deg: 91deg;
+}
+
+.member:hover .thumb img {
+	filter: none;
+	transition: var(--trans);
+}
+
+.description {
+	padding-top: 1vmin;
+}
+
+.description p {
+	padding: 0 2em;
+}
+
+h3 {
+	background: linear-gradient(182deg, #fff0 60%, var(--dark) 0 100%);
+	display: inline;
+	transform: rotate(-2deg);
+	position: absolute;
+	margin: 0;
+	margin-top: -2.25em;
+	left: 9vmin;
+	padding: 0.5em 0.75em;
+	color: var(--yellow);
+	border-radius: 0.25em;
+	font-size: 1.35em;
+	transform-origin: left bottom;
+}
+
+.member:nth-of-type(even) h3 {
+	left: inherit;
+	right: 9vmin;
+	transform: rotate(2deg);
+	transform-origin: right bottom;
+	background: linear-gradient(-182deg, #fff0 60%, var(--dark) 0 100%);
+}
+
+.member:hover h3 {
+	transition: var(--trans);
+	transform: rotate(0deg);
+	background: linear-gradient(180deg, #fff0 59%, var(--dark) 0 100%);
+}
+
+.co-funder:after {
+	content: "CO-FUNDER";
+	font-size: 0.75em;
+	position: absolute;
+	top: -1.5em;
+	background: var(--yellow);
+	right: 4em;
+	transform: rotate(3deg);
+	padding: 0.35em 0.75em 0.5em;
+	border-radius: 0.25em;
+	color: var(--dark);
+	font-weight: bold;
+}
+
+.co-funder:nth-of-type(even):after {
+	right: inherit;
+	left: 4em;
+	transform: rotate(-3deg);
+}
+
+.description p a {
+	display: inline-block;
+	margin: 0.5em 0 0 0;
+	background: var(--dark);
+	color: var(--yellow);
+	padding: 0.1em 0.5em 0.35em;
+	border-radius: 0.5em;
+	text-decoration: none;
+	transition: var(--trans);
+}
+.description p a:hover {
+	transition: var(--trans);
+	color: var(--dark);
+	background: var(--yellow);
+	font-weight: bold;
+}
+
+.description p a img {
+	float: left;
+	width: 22px;
+	filter: invert(1);
+	border-radius: 0.15em;
+	padding: 2px;
+	background: #fff;
+	margin-right: 2px;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="css1/htmleaf-demo.css">
+</head>
+<body>
+
+ 
+
+
+<div class="content">
+<div class="htmleaf-container">
+		<header class="htmleaf-header">
+			<h1>志愿服务活动开展<span>我们陪你一路同行</span></h1>
+			<div class="htmleaf-links">
+				<a class="htmleaf-icon icon-htmleaf-home-outline" href="https://haijiaodao.github.io/2024/" title="新闻" target="_blank"><span>党支部</span></a>
+				<a class="htmleaf-icon icon-htmleaf-arrow-forward-outline" href="" title="返回" target="_blank"><span> 返回</span></a>
+			</div>
+		</header>
+	</div>
+	<ul class="team">
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/1.png"></div>
+			<div class="description">
+				<h3>史开鹏</h3>
+				<p>开展慰问环卫工人活动，进一步推动党员“双报到”志愿服务活动走深走实，志愿者们分组行动，为工作中的环卫工人送上毛巾、洗衣液、护发素、绿豆、菊花茶、香皂、水杯、洗发水等生活用品...<br><a href="#">环保、文明</a></p>
+			</div>
+		</li>
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/2.png"></div>
+			<div class="description">
+				<h3>李晶</h3>
+				<p>积极参与“弘扬雷锋精神，贡献青春力量”雷锋主题志愿活动，青年志愿者走进社区为周边工友、居民等提供义诊、义剪、磨剪刀、裁缝、法律援助、政策宣传等便民服务...<br><a href="#">热爱、救助</a></p>
+			</div>
+		</li>
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/3.png"></div>
+			<div class="description">
+				<h3>陈毅</h3>
+				<p>志愿者们分别从防范电信诈骗、电动自行车管理条例、消防安全、生产安全、文明交通宣传等方面为居民开展宣传活动，志愿者们发放传统宣传单页并结合实际案例进行讲解，吸引许多居民到现场了解并学习相关的知识与政策。<br><a href="#">宣讲、解惑</a></p>
+			</div>
+		</li>
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/4.png"></div>
+			<div class="description">
+				<h3>于朕鑫</h3>
+				<p>“这是60年前的老书，但雷锋精神的传承历久弥新、永无止境。”在“旧书新知区”，向大家展示出一本1963年出版的《中国青年——学习雷锋专辑》，其中首版首刊是毛泽东主席题词“向雷锋同志学习”。<br><a href="#">传承、精神</a></p>
+			</div>
+		</li>
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/5.png"></div>
+			<div class="description">
+				<h3>武晓莉</h3>
+				<p>常态化开展党的创新理论宣讲、文明实践行动、敬老助老、关爱青少年、关爱残疾人、“平安甘肃”建设7项主题志愿服务活动，引导广大志愿者和志愿服务组织弘扬志愿精神，传播志愿文化，以志愿力量为社会治理注入活力。<br><a href="#">关爱、实践</a></p>
+			</div>
+		</li>
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/6.png"></div>
+			<div class="description">
+				<h3>霍永瑨</h3>
+				<p>便民市集人头攒动，热闹非凡，在政策宣讲区、法律咨询区、公益服务区等多个区域，居民纷纷在自己感兴趣的摊位前排起了长队，志愿者们忙碌地为居民服务着，用自己的专业技能为百姓带来最实在的帮助。测血压、缝纫、理发、首饰清洗、为老送餐……服务送到了居民百姓的“心坎上”，增添了邻里生活的“人情味”。>温暖、互助</a></p>
+			</div>
+		</li>
+		<li class="member">
+			<div class="thumb"><img src="assets/picture/7.png"></div>
+			<div class="description">
+				<h3>董立军</h3>
+				<p>围绕市区周边治理中心工作，依托新时代志愿服务品牌“志愿＋”项目体系，积极投身到公益劳动、志愿服务、文明城市、和谐社会、基层治理等工作中，奋楫笃行，善作善成，用实际行动践行和弘扬新时代雷锋精神。<br><a href="#">奉献、弘扬</a></p>
+			</div>
+		</li>
+	</ul>
+
+</div>	
+	
+
+<script>
+</script>
+
+</body>
+</html>
